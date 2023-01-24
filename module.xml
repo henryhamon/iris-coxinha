@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+  <Document name="iris-coxinha.ZPM">
+    <Module>
+      <Name>iris-coxinha</Name>
+      <Version>2.0.3</Version>
+      <Description>The simplest template to run embedded python</Description>
+      <Packaging>module</Packaging>
+      <SourcesRoot>src</SourcesRoot>
+      <Dependencies>
+        <ModuleReference>
+          <Name>samples-bi</Name>
+          <Version>1.*</Version>
+        </ModuleReference>
+      </Dependencies>
+      <Resource Name="dc.python.PKG"/>
+      <FileCopy Name="python/" Target="${libdir}python/"/>
+      <FileCopy Name="data/" Target="${libdir}data/"/>
+    </Module>
+  </Document>
+</Export>
