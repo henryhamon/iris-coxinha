@@ -1,5 +1,6 @@
 import iris
 import sketch
+import numpy as np
 
 def ask(prompt_str, df):
     print('-------')
@@ -62,3 +63,25 @@ exec(code, {"df": df})
 prompt_str = 'Get the top 5 grossing products, per city?'
 code = howto(prompt_str, sample_df)
 exec(code, {"df": df})
+
+prompt_str = 'Creata a new column called dataofsale_formatted from the conversion of the dateofsale column to DD/MM/YYYY?'
+code = howto(prompt_str, sample_df)
+exec(code, {"df": df})
+print(df[['dateofsale','dataofsale_formatted']])
+
+prompt_str = 'Create new column called full_address combining columns OutletCity, OutletCountry and ZipCode separated by comma.'
+code = howto(prompt_str, sample_df)
+exec(code, {"df": df})
+print(df['full_address'])
+
+# não funcionou
+# prompt_str = 'Leave just the outliers amountofsales'
+# code = howto(prompt_str, sample_df)
+# exec(code, {"df": df, "np": np})
+# print(df[['dateofsale','dataofsale_formatted']])
+
+# não funcionou
+# prompt_str = 'Drop lines where column comment is NA'
+# code = howto(prompt_str, sample_df)
+# exec(code, {"df": df})
+# print(df)
